@@ -1,0 +1,3 @@
+# 本地自测额外依赖（服务运行本身仅需 requirements.txt）
+# selftest.py 只用标准库 + 运行依赖里的 numpy/rasterio，无额外三方包
+-r requirements.txt

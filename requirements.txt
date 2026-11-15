@@ -1,0 +1,6 @@
+# 运行依赖（Docker 内安装；rasterio 的 manylinux wheel 自带 GDAL）
+fastapi>=0.115
+uvicorn[standard]>=0.34
+rasterio>=1.4
+python-multipart>=0.0.20
+numpy>=2.1

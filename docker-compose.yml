@@ -1,0 +1,19 @@
+services:
+  clip-api:
+    build: .
+    image: geotiff-clip-service:latest
+    container_name: geotiff-clip-api
+    ports:
+      - "8000:8000"
+    environment:
+      DATA_DIR: /data
+      # 测试取消时可调大（例如 0.1），生产保持 0
+      CLIP_BLOCK_DELAY: "0"
+      CANCEL_WAIT_TIMEOUT: "10"
+      MAX_UPLOAD_BYTES: "209715200"
+    volumes:
+      - clip-data:/data
+    restart: unless-stopped
+
+volumes:
+  clip-data:
